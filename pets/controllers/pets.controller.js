@@ -20,7 +20,11 @@ export const addPet = (req, res) => {
 
 export const listPets = (req, res) => {
   try {
-  } catch (error) {}
+    const resp = listItems();
+    res.status(200).json(resp);
+  } catch (error) {
+    res.status(500).send(error);
+  }
 };
 
 export const getPet = (req, res) => {
