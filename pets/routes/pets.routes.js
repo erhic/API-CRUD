@@ -19,3 +19,5 @@ router.get("/", listPets);
 router.get("/:id", getPet);
 router.put("/:id", editPet);
 router.delete("/:id", deletePet);
+
+export default router;
