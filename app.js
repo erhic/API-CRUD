@@ -14,3 +14,5 @@ import petRoutes from "./pets/routes/pets.routes.js";
 const app = express();
 // defining port to use
 const port = "3000";
+
+app.use(cors());
