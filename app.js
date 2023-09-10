@@ -25,3 +25,12 @@ app.use(express.json());
 routes
 */
 app.use("/pets", petRoutes);
+
+/**
+ * setting the port which our app is to listen on and display on the console
+ */
+if (process.env.NODE_ENV !== "test") {
+  app.listen(port, () =>
+    console.log(`⚡️[server]: Server is running at https;//localhost:${port}`)
+  );
+}
