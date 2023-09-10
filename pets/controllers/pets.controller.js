@@ -11,20 +11,28 @@ import {
 
 export const addPet = (req, res) => {
   try {
-  } catch (error) {}
+    const resp = addItem(req.body);
+    res.status(200).json(resp);
+  } catch (error) {
+    res.status(500).send(error);
+  }
 };
+
 export const listPets = (req, res) => {
   try {
   } catch (error) {}
 };
+
 export const getPet = (req, res) => {
   try {
   } catch (error) {}
 };
+
 export const editPet = (req, res) => {
   try {
   } catch (error) {}
 };
+
 export const deletePet = (req, res) => {
   try {
   } catch (error) {}
