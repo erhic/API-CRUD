@@ -6,7 +6,7 @@ import {
   deleteItem,
 } from "../models/pets.model";
 /**
- * callback function to call our models function ,that return resources from the database,
+ * callback function to call our(models function => that return resources from the database,
  */
 
 export const addPet = (req, res) => {
@@ -29,7 +29,11 @@ export const listPets = (req, res) => {
 
 export const getPet = (req, res) => {
   try {
-  } catch (error) {}
+    const resp = getItem(parseInt(req.params.id));
+    res.status(200).json(resp);
+  } catch (error) {
+    res.status(500).send(error);
+  }
 };
 
 export const editPet = (req, res) => {
