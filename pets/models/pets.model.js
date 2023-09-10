@@ -24,6 +24,14 @@ export const getItem = (id) => {
 };
 export const deleteItem = (id) => {
   try {
+    const deletePet = db?.pets?.filter((petDelItem) => {
+      petDelItem?.id === id;
+    })[0];
+    if (deletePet === -1) throw new Error("Pet not found");
+    else {
+      db.pets.slice(deletePet, 1);
+      return db.pets;
+    }
   } catch (error) {}
 };
 export const editItem = (data) => {
