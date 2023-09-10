@@ -34,3 +34,5 @@ if (process.env.NODE_ENV !== "test") {
     console.log(`⚡️[server]: Server is running at https;//localhost:${port}`)
   );
 }
+
+export default app;
