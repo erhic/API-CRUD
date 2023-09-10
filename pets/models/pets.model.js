@@ -16,7 +16,11 @@ export const listItems = () => {
 };
 export const getItem = (id) => {
   try {
-  } catch (error) {}
+    const pet = db?.pets?.filter((petItem) => petItem?.id === id)[0];
+    return pet;
+  } catch (error) {
+    console.log("Error found", error);
+  }
 };
 export const deleteItem = (id) => {
   try {
