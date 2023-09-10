@@ -12,3 +12,5 @@ import petRoutes from "./pets/routes/pets.routes.js";
  * getting rid of express top level function from imported express be able to use it to create an express app , we store it in a variable.
  */
 const app = express();
+// defining port to use
+const port = "3000";
