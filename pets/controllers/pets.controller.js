@@ -47,5 +47,9 @@ export const editPet = (req, res) => {
 
 export const deletePet = (req, res) => {
   try {
-  } catch (error) {}
+    const resp = deleteItem(parseInt(req.params.id));
+    res.status(200).json(resp);
+  } catch (error) {
+    res.status(500).send(error);
+  }
 };
