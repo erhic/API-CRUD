@@ -9,7 +9,10 @@ export const addItem = (data) => {
 };
 export const listItems = () => {
   try {
-  } catch (error) {}
+    return db?.pets;
+  } catch (error) {
+    console.log("Error", error);
+  }
 };
 export const getItem = (id) => {
   try {
