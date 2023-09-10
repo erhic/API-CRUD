@@ -34,7 +34,14 @@ export const deleteItem = (id) => {
     }
   } catch (error) {}
 };
-export const editItem = (data) => {
+export const editItem = (id, data) => {
   try {
+    const index = db?.pets?.filter((petIndex) => petIndex?.id === id)[0];
+
+    if (index === -1) throw new Error("Pet not found");
+    else {
+      db.pets[index] = data;
+      return db.pets[index];
+    }
   } catch (error) {}
 };
