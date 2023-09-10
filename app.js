@@ -15,5 +15,13 @@ const app = express();
 // defining port to use
 const port = "3000";
 
+/**
+global middleware
+*/
 app.use(cors());
 app.use(express.json());
+
+/**
+routes
+*/
+app.use("/pets", petRoutes);
